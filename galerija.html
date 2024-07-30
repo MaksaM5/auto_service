@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    <title>AUTO service</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="menu-toggle">
+        <div class="hamburger"></div>
+      </div>
+      <ul class="menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="onama.html">About</a></li>
+        <li><a href="usluge.html">Services</a></li>
+        <li><a href="galerija.html">Gallery</a></li>
+        <li><a href="kontakt.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="link-list">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="onama.html">About</a></li>
+        <li><a href="usluge.html">Services</a></li>
+        <li><a href="galerija.html">Gallery</a></li>
+        <li><a href="kontakt.html">Contact</a></li>
+      </ul>
+    </div>
+    <br><br>
+    <h1>Our Gallery</h1>
+    <div class="gallery">
+      <div class="row">
+        <img
+          src="img/gal1.jpg"
+          alt="galerija 1"
+          onclick="openModal('img/gal1.jpg')"
+        />
+        <img
+          src="img/gal2.jpg"
+          alt="galerija 2"
+          onclick="openModal('img/gal2.jpg')"
+        />
+        <img
+          src="img/gal3.jpg"
+          alt="galerija 3"
+          onclick="openModal('img/gal3.jpg')"
+        />
+      </div>
+      <div class="row">
+        <img
+          src="img/gal4.jpg"
+          alt="galerija 4"
+          onclick="openModal('img/gal4.jpg')"
+        />
+        <img
+          src="img/gal5.jpg"
+          alt="galerija 5"
+          onclick="openModal('img/gal5.jpg')"
+        />
+        <img
+          src="img/gal6.jpg"
+          alt="galerija 6"
+          onclick="openModal('img/gal6.jpg')"
+        />
+      </div>
+      <div class="row">
+        <img
+          src="img/gal7.jpg"
+          alt="Slika 7"
+          onclick="openModal('img/gal7.jpg')"
+        />
+        <img
+          src="img/gal8.jpg"
+          alt="Slika 8"
+          onclick="openModal('img/gal8.jpg')"
+        />
+        <img
+          src="img/gal9.jpg"
+          alt="Slika 9"
+          onclick="openModal('img/gal9.jpg')"
+        />
+      </div>
+      <div class="row">
+        <img
+          src="img/gal10.jpg"
+          alt="Slika 10"
+          onclick="openModal('img/gal10.jpg')"
+        />
+        <img
+          src="img/gal11.jpg"
+          alt="Slika 11"
+          onclick="openModal('img/gal11.jpg')"
+        />
+        <img
+          src="img/gal12.jpg"
+          alt="Slika 12"
+          onclick="openModal('img/gal12.jpg')"
+        />
+      </div>
+    </div>
+
+    <div id="modal" class="modal">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <img id="modal-image" src="" alt="Modalna slika" />
+    </div>
+    <footer class="footer">
+      <div class="footer-column">
+        <h4>Adress:</h4>
+        <p>Belgrade, Serbia</p>
+      </div>
+      <div class="footer-column">
+        <h4>E-mail:</h4>
+        <p>auto-service@gmail.com</p>
+      </div>
+      <div class="footer-column">
+        <h4>Opening hours:</h4>
+        <p>Monday to Friday: 10am - 5pm</p>
+        <p>Saturday: 10am - 3pm<br>
+          Sunday: Closed
+        </p>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+    <script src="gallery.js"></script>
+  </body>
+</html>

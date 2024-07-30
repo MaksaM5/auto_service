@@ -1,0 +1,413 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #333;
+  position: relative;
+  overflow-x: hidden; /* Sprečava horizontalni scrollbar */
+  padding: 0;
+}
+
+.car-container {
+  position: absolute;
+  top: 100px; /* Pozicija u odnosu na vrh stranice */
+  left: -200px; /* Početna pozicija van ekrana */
+  transition: left 5s linear; /* Animacija pomeranja slike */
+}
+
+.car {
+  width: 200px; /* Veličina slike automobila */
+  height: auto;
+}
+
+.navbar {
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+}
+
+.menu {
+  list-style-type: none;
+  align-items: center;
+  margin-left: 15%;
+  padding: 0;
+  display: flex;
+}
+
+.menu li {
+  margin-right: 150px;
+}
+
+.menu li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.menu-toggle {
+  display: none;
+}
+
+.menu-toggle .hamburger {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  margin: 5px 0;
+}
+
+.link-list {
+  display: none;
+}
+
+.slider {
+  position: relative;
+  top: 70px;
+  overflow: hidden;
+  margin-top: 50px;
+}
+
+.slider .slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slider .slides .slide {
+  width: 100%;
+  flex: 0 0 100%;
+  text-align: center;
+  position: relative;
+}
+
+.slider .slides .slide img {
+  width: 100%;
+  height: 500px;
+}
+
+.slider .slides .slide h2 {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+}
+
+.slider button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.slider button.prev {
+  left: 10px;
+}
+
+.slider button.next {
+  right: 10px;
+}
+
+.cards {
+  display: flex;
+  justify-content: space-between;
+  margin: 40px;
+  color: #fff;
+}
+
+.cards .card {
+  flex: 0 0 calc(33.333% - 20px);
+  margin-right: 20px;
+  position: relative;
+}
+
+.cards .card:last-child {
+  margin-right: 0;
+}
+
+.cards .card img {
+  width: 100%;
+  height: 300px;
+}
+
+h3 {
+  color: #fff;
+  text-align: center;
+}
+
+p {
+  color: #fff;
+  text-align: justify;
+}
+
+.card-content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.3s ease;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  font-size: 1.2em;
+}
+
+.card:hover .card-image {
+  opacity: 0; /* Sakriva sliku na hover */
+}
+
+.card:hover .overlay {
+  opacity: 1; /* Prikazuje overlay na hover */
+}
+
+.image-container img {
+  width: 100%;
+  height: 600px; /* Održava proporcije slike */
+}
+
+.footer {
+  font-family: Arial, sans-serif;
+  background-color: #000;
+  color: #fff;
+  padding: 20px;
+  display: flex;
+}
+
+main {
+  padding: 20px;
+}
+
+.services-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+/* Početni stil za servis */
+.service {
+  opacity: 0; /* Početno nevidljivi */
+  transform: translateY(20px); /* Početni pomak sa Y osi */
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out; /* Animacija za promene */
+  margin: 50px; /* Ako je potrebno za layout */
+  padding: 20px;
+  background-color: #555; /* Primer boje pozadine */
+  color: #fff; /* Tekst u beloj boji */
+  border-radius: 8px; /* Ako želite zaobljene ivice */
+}
+
+/* Stil za vidljive servise */
+.service.visible {
+  opacity: 3; /* Postaju vidljivi */
+  transform: translateY(0); /* Vraća se na originalnu poziciju */
+}
+
+h2{
+  color:#000
+}
+
+h1 {
+  margin: 0;
+}
+
+.footer .footer-column {
+  flex: 1;
+  padding: 0 20px;
+  margin-left: 60px;
+}
+
+.footer .footer-column h4 {
+  margin-bottom: 10px;
+}
+
+.footer .footer-column p,
+.footer .footer-column ul {
+  margin: 0;
+}
+
+.footer .footer-column ul {
+  list-style-type: none;
+}
+
+.tekst_usluge{
+  color: #f0f0f0;
+}
+
+.container {
+  margin: 100px;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.content {
+  display: flex;
+}
+
+.content .left-column {
+  flex: 2;
+  padding: 20px;
+  color: #fff;
+  text-align: justify;
+}
+
+.content .right-column {
+  flex: 1;
+}
+
+.content .right-column img {
+  width: 100%;
+  height: 100%;
+}
+
+h1 {
+  text-align: center;
+  color: #fff;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 20px auto;
+}
+
+.gallery .row {
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+}
+
+.gallery .row img {
+  width: 400px;
+  height: 350px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal img {
+  display: block;
+  margin: auto;
+  max-width: 80%;
+  max-height: 80%;
+}
+
+.modal .close {
+  color: #fff;
+  font-size: 30px;
+  font-weight: bold;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  cursor: pointer;
+}
+
+.form-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 80px; /* Da bi se izbeglo preklapanje sa navigacijom */
+  padding: 20px;
+}
+
+.contact-content {
+  display: flex;
+  flex-direction: row;
+  max-width: 1200px;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-image img {
+  width: 100%;
+  height: auto;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+
+.contact-form {
+  flex: 1;
+  padding: 20px;
+}
+
+.contact-form h2 {
+  margin-top: 0;
+  color: #333;
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.contact-form button {
+  background-color: #555; /* Zamena boje pozadine dugmeta u sivu */
+  color: #fff; /* Boja teksta na dugmetu */
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.contact-form button:hover {
+  background-color: #333; /* Tamnija siva za hover stanje */
+}
